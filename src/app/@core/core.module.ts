@@ -14,6 +14,8 @@ import { APP_LANG, APP_NAME } from "./tokens";
 
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { RecipesService } from "../recipes/services/recipes.service";
+import { ShoppingListService } from "../shopping-list/services/shopping-list.service";
 
 export function initializerFactory(appConfig: AppInitService) {
   return (): Promise<any> => appConfig.load();
@@ -50,6 +52,7 @@ export class CoreModule {
   static forRoot(options: { defaultLanguage?: string; appName?: string }): ModuleWithProviders<CoreModule> {
     return {
       ngModule: CoreModule,
+
       providers: [
         {
           provide: APP_LANG,
@@ -89,6 +92,8 @@ export class CoreModule {
           multi: true,
         },
         AppInitService,
+        RecipesService,
+        ShoppingListService,
       ],
     };
   }

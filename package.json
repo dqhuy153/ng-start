@@ -41,7 +41,7 @@
     "@ngrx/component-store": "^13.0.2",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
-    "bootstrap": "^5.2.2",
+    "bootstrap": "3.3.7",
     "chart.js": "^2.9.4",
     "core-js": "^2.6.12",
     "moment": "^2.29.1",
@@ -49,6 +49,7 @@
     "ngx-json-viewer": "^3.0.2",
     "rxjs": "^6.6.7",
     "tslib": "^2.2.0",
+    "uuid": "^9.0.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

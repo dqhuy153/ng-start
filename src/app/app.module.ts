@@ -2,9 +2,11 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CoreModule } from "@core/core.module";
+import { DropdownDirective } from "@shared/directives/dropdown.directive";
 import { SharedModule } from "@shared/shared.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { HeaderModule } from "./header/header.module";
 import { HomeModule } from "./home/home.module";
 import { NavigationModule } from "./navigation/navigation.module";
 
@@ -14,7 +16,7 @@ import { NavigationModule } from "./navigation/navigation.module";
 
 const APP_CORE_CONFIG = {
   defaultLanguage: "en",
-  appName: "NG-Start",
+  appName: "Shopping List",
 };
 
 @NgModule({
@@ -27,7 +29,8 @@ const APP_CORE_CONFIG = {
     SharedModule,
 
     // app
-    NavigationModule,
+    // NavigationModule,
+    HeaderModule,
     HomeModule,
     AppRoutingModule,
   ],

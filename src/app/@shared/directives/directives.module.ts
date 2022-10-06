@@ -6,12 +6,14 @@ import { NumberDirective } from "./numeric.directive";
 import { UppercaseDirective } from "./uppercase.directive";
 import { AlphabetOnlyDirective } from "./alphabet-only.directive";
 import { LetDirective } from "./ng-let.directive";
+import { DropdownDirective } from "./dropdown.directive";
 
 export const SHARED_DIRECTIVES: Array<Type<any>> = [
   NumberDirective,
   UppercaseDirective,
   AlphabetOnlyDirective,
   LetDirective,
+  DropdownDirective,
 ];
 
 @NgModule({

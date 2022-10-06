@@ -5,7 +5,16 @@ import { HomeComponent } from "./home/home.component";
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent,
+    redirectTo: "/recipes",
+    pathMatch: "full",
+  },
+  {
+    path: "recipes",
+    loadChildren: () => import("./recipes/recipes.module").then((m) => m.RecipesModule),
+  },
+  {
+    path: "shopping-list",
+    loadChildren: () => import("./shopping-list/shopping-list.module").then((m) => m.ShoppingListModule),
   },
   {
     path: "forms",
@@ -15,25 +24,10 @@ const routes: Routes = [
     path: "dc",
     loadChildren: () => import("./dynamic-components/dc.module").then((m) => m.DCModule),
   },
-  {
-    path: "rx",
-    loadChildren: () => import("./rxjs/rxjs.module").then((m) => m.RxjsModule),
-  },
-  {
-    path: "users",
-    loadChildren: () => import("./users/users.module").then((m) => m.UsersModule),
-  },
-  {
-    path: "cards",
-    loadChildren: () => import("./unit-cards/cards.module").then((m) => m.CardsModule),
-  },
+
   {
     path: "patterns",
     loadChildren: () => import("./patterns/patterns.module").then((m) => m.PatternsModule),
-  },
-  {
-    path: "unit-tests",
-    loadChildren: () => import("./unit-tests/unit-tests.module").then((m) => m.UnitTestModule),
   },
   { path: "**", redirectTo: "", pathMatch: "full" },
 ];
