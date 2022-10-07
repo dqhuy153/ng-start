@@ -1,3 +1,11 @@
 {
-  "l9.dashboard.title": "Home"
+  "ADDRESS_MUST_BE_STATE_RESIDING_RESIDENCE_NOT_LISTED_CONTACT_LOCAL_OFFICE": "The address must be in the state you are currently residing. If your residence is in Canada or not listed on the drop down, please contact your local office for assistance.",
+  "APPLY_BENEFITS_ONLINE": "Apply for Benefits Online",
+  "RECEIVE_BENEFIT_PAYMENT_YOU_MUST": "To receive a benefit payment, you must:",
+  "ADEQUATE_AMOUNT_WAGES_IN_BASE_PERIOD": "Have an adequate amount of wages in your <a data-toggle=\"collapse\" data-target=\"#base_period\">base period</a>.",
+  "BASE_PERIOD_FIRST_FOUR_CALENDAR_QUARTERS_MONETARY_ELIGIBILITY_HOW_MUCH_EARN": "The Base Period is the first four of the last five completed calendar quarters at the time you open your initial claim for benefits.  Monetary eligibility is based upon how much you earned during this base period.",
+  "BENEFITS_ESTIMATOR_ENTER_BASE_PERIOD_WAGES": "<a href=\"https://huiclaims2.hawaii.gov/UI_ClaimWEB/pages/calculator/calculator.jsf\" target=\"_blank\">Benefits Estimator</a>: enter your base period wages to get an estimate of your weekly benefit amount.",
+  "BE_AVAILABLE_FOR_WORK_DURING_HOURS": "Be <a ng-click=\"able()\">able</a> and <a ng-click=\"available()\">available</a> for work during your customary hours.",
+  "PHYSICALLY_MENTALLY_ABLE_WORK_MEDICAL_WAIVER": "You must be Physically and Mentally Able to Work when you file an Initial Claim.  If you become ill or disabled AFTER you file an initial claim for benefits, a medical waiver may apply if your condition is certified by a doctor and no suitable work is refused due to your medical condition.",
+  "READY_WILLING_ACCEPT_WORK_LABOR_MARKET": "You must be ready and willing to Seek and Accept Work that is suitable in your labor market.  You must be ready to accept work during the customary days and hours for your occupation."
 }

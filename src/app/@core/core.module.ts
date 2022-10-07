@@ -4,7 +4,7 @@ import { APP_INITIALIZER, ErrorHandler, ModuleWithProviders, NgModule, Optional,
 import { RouteReuseStrategy } from "@angular/router";
 import { GlobalErrorHandler } from "@core/services/global-error-handler";
 import { environment } from "src/environments/environment";
-import { throwIfAlreadyLoaded } from "./guards/module-import-guard";
+import { throwIfAlreadyLoaded } from "./guards/module-import.guard";
 import { ApiPrefixInterceptor } from "./interceptor/api-prefix.interceptor";
 import { HttpErrorInterceptor } from "./interceptor/http-error.interceptor";
 import { TokenInterceptor } from "./interceptor/jwt-interceptor";
@@ -16,6 +16,7 @@ import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { RecipesService } from "../recipes/services/recipes.service";
 import { ShoppingListService } from "../shopping-list/services/shopping-list.service";
+import { AuthService } from "../auth/services/auth.service";
 
 export function initializerFactory(appConfig: AppInitService) {
   return (): Promise<any> => appConfig.load();
@@ -94,6 +95,7 @@ export class CoreModule {
         AppInitService,
         RecipesService,
         ShoppingListService,
+        AuthService,
       ],
     };
   }

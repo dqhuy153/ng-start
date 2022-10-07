@@ -1,6 +1,6 @@
 import { RecipesComponent } from "./recipes.component";
 import { NgModule } from "@angular/core";
-import { NoPreloading, RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
 import { RecipesEditComponent } from "./components/recipes-edit/recipes-edit.component";
 import { RecipesDetailComponent } from "./components/recipes-detail/recipes-detail.component";
 

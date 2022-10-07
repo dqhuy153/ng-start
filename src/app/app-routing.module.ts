@@ -1,16 +1,17 @@
 import { NgModule } from "@angular/core";
 import { NoPreloading, RouterModule, Routes } from "@angular/router";
+import { AuthGuard } from "@core/guards/auth.guard";
 import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "/recipes",
-    pathMatch: "full",
+    loadChildren: () => import("./auth/auth.module").then((m) => m.AuthModule),
   },
   {
     path: "recipes",
     loadChildren: () => import("./recipes/recipes.module").then((m) => m.RecipesModule),
+    canActivate: [AuthGuard],
   },
   {
     path: "shopping-list",

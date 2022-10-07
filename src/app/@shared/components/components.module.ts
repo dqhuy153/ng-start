@@ -3,8 +3,9 @@ import { NgModule, Type } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 
 import { LoaderComponent } from "./loader/loader.component";
+import { LoadingSpinnerComponent } from "./loading-spinner/loading-spinner.component";
 
-export const SHARED_COMPONENTS: Type<any>[] = [LoaderComponent];
+export const SHARED_COMPONENTS: Type<any>[] = [LoaderComponent, LoadingSpinnerComponent];
 
 @NgModule({
   imports: [CommonModule, ReactiveFormsModule],

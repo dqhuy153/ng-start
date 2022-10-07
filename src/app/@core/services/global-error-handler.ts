@@ -30,7 +30,7 @@ export class GlobalErrorHandler implements ErrorHandler {
       // Http Error
       // Show notification to the user
       log.error("Request error", error);
-      alert(`${error.status} - ${error.message}`);
+      // alert(`${error.status} - ${error.message}`);
     }
   }
 
