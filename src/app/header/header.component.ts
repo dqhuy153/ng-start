@@ -12,6 +12,7 @@ import { AuthService } from "../auth/services/auth.service";
 export class HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   private userSubscription: Subscription;
+  currentLang = "en";
 
   constructor(private translate: TranslateService, private authService: AuthService) {}
 
@@ -25,13 +26,30 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.authService.logout();
   }
 
-  onChangeLanguage() {
-    const lang = localStorage.getItem("language") || "en";
+  // onChangeLanguage() {
+  //   const lang = localStorage.getItem("language") || "en";
 
-    const switchedLang = lang === "en" ? "jp" : "en";
+  //   const switchedLang = lang === "en" ? "jp" : "en";
 
-    this.translate.use(switchedLang);
-    localStorage.setItem("language", switchedLang);
+  //
+  // }
+
+  onChangeEnLang() {
+    this.translate.use("en");
+    localStorage.setItem("language", "en");
+    this.currentLang = "en";
+  }
+
+  onChangeJpLang() {
+    this.translate.use("jp");
+    localStorage.setItem("language", "jp");
+    this.currentLang = "jp";
+  }
+
+  onChangeViLang() {
+    this.translate.use("vi");
+    localStorage.setItem("language", "vi");
+    this.currentLang = "vi";
   }
 
   ngOnDestroy(): void {

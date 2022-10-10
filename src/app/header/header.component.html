@@ -20,6 +20,15 @@
         <li *ngIf="isAuthenticated">
           <a style="cursor: pointer" (click)="onLogout()">Logout</a>
         </li>
+        <li [ngClass]="{ active: currentLang === 'en' }">
+          <a style="cursor: pointer" (click)="onChangeEnLang()">EN</a>
+        </li>
+        <li [ngClass]="{ active: currentLang === 'jp' }">
+          <a style="cursor: pointer" (click)="onChangeJpLang()">JP</a>
+        </li>
+        <li [ngClass]="{ active: currentLang === 'vi' }">
+          <a style="cursor: pointer" (click)="onChangeViLang()">VN</a>
+        </li>
         <li class="dropdown" appDropdown>
           <a style="cursor: pointer" class="dropdown-toggle" role="button">
             Manage
@@ -31,9 +40,6 @@
             </li>
             <li *ngIf="isAuthenticated">
               <a style="cursor: pointer">Fetch Data</a>
-            </li>
-            <li>
-              <a style="cursor: pointer" (click)="onChangeLanguage()">Switch language</a>
             </li>
           </ul>
         </li>
